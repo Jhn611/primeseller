@@ -1,0 +1,9 @@
+name: business-card-site
+
+services:
+  business-card-site:
+    build: .
+    container_name: business-card-site
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:3340:80'

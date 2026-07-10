@@ -1,0 +1,314 @@
+.features {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 92px 0;
+  background: #f6f8f6;
+}
+
+.features::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(23, 32, 27, 0.18) 0 1px, transparent 1.35px),
+    radial-gradient(circle, rgba(8, 127, 91, 0.18) 0 1px, transparent 1.35px);
+  background-position: 0 0, 9px 9px;
+  background-size: 18px 18px;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  opacity: 0.42;
+}
+
+.features__motion-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.features__beam {
+  position: absolute;
+  width: clamp(665px, 80.5vw, 1330px);
+  height: clamp(150px, 18vw, 280px);
+  border-radius: 999px;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(38, 196, 120, 0.94) 0%, rgba(19, 166, 103, 0.9) 34%, rgba(8, 127, 91, 0.66) 62%, rgba(8, 127, 91, 0.616) 80%, transparent 92%);
+  box-shadow:
+    0 0 38px rgba(38, 196, 120, 0.5),
+    0 0 110px rgba(19, 166, 103, 0.38),
+    0 0 184px rgba(8, 127, 91, 0.26);
+  filter: blur(6px);
+  opacity: 0.9;
+  transform-origin: 50% 50%;
+  will-change: transform;
+  animation: featuresOvalDriftOne 24s ease-in-out infinite;
+}
+
+.features__beam--one {
+  left: 5%;
+  top: 18%;
+  width: clamp(2595px, 120vw, 5120px);
+  height: clamp(330px, 36vw, 740px);
+  animation-duration: 24s;
+}
+
+.features__beam--two {
+  right: 7%;
+  top: 12%;
+  width: clamp(2595px, 120vw, 5120px);
+  height: clamp(330px, 36vw, 740px);
+  opacity: 0.86;
+  animation-name: featuresOvalDriftTwo;
+  animation-duration: 28s;
+  animation-delay: -12s;
+}
+
+.features__beam--three {
+  left: 35%;
+  top: 38%;
+  width: clamp(2595px, 120vw, 5120px);
+  height: clamp(330px, 36vw, 740px);
+  opacity: 0.8;
+  animation-name: featuresOvalDriftThree;
+  animation-duration: 32s;
+  animation-delay: -24s;
+}
+
+.features__beam--four {
+  right: 35%;
+  bottom: 13%;
+  width: clamp(2595px, 120vw, 5120px);
+  height: clamp(330px, 36vw, 740px);
+  opacity: 0.78;
+  animation-name: featuresOvalDriftOne;
+  animation-duration: 30s;
+  animation-delay: -18s;
+}
+
+.features .section-header {
+  padding: 20px;  
+}
+
+.features .eyebrow {
+  color: var(--green-dark);
+}
+
+.features .section-title {
+  color: var(--ink);
+}
+
+.features .section-lead {
+  color: var(--ink-lite);
+}
+
+.features .section-shell {
+  position: relative;
+  z-index: 2;
+}
+
+.features .feature-tabs__tab {
+  border-color: rgba(255, 255, 255, 0.38);
+  color: rgba(23, 32, 27, 0.78);
+}
+
+.features .feature-tabs__tab--active {
+  color: var(--ink);
+}
+
+.features .feature-tabs__screener-top span,
+.features .feature-tabs__note span {
+  color: rgba(6, 77, 59, 0.74);
+}
+
+.features .feature-tabs__note strong {
+  color: var(--ink);
+}
+
+.features .feature-tabs__note p {
+  color: rgba(23, 32, 27, 0.72);
+}
+
+@keyframes featuresOvalDriftOne {
+  0% {
+    transform: translate3d(-4vw, 1.5rem, 0) rotate(8deg) scale(0.96, 1.08);
+  }
+
+  28% {
+    transform: translate3d(12vw, -3.5rem, 0) rotate(42deg) scale(1.08, 0.92);
+  }
+
+  62% {
+    transform: translate3d(22vw, 4rem, 0) rotate(96deg) scale(0.9, 1.16);
+  }
+
+  100% {
+    transform: translate3d(-4vw, 1.5rem, 0) rotate(188deg) scale(0.96, 1.08);
+  }
+}
+
+@keyframes featuresOvalDriftTwo {
+  0% {
+    transform: translate3d(5vw, -2rem, 0) rotate(-16deg) scale(0.92, 1.04);
+  }
+
+  35% {
+    transform: translate3d(-16vw, 5rem, 0) rotate(-64deg) scale(1.12, 0.88);
+  }
+
+  72% {
+    transform: translate3d(-7vw, -5rem, 0) rotate(-132deg) scale(0.96, 1.14);
+  }
+
+  100% {
+    transform: translate3d(5vw, -2rem, 0) rotate(-196deg) scale(0.92, 1.04);
+  }
+}
+
+@keyframes featuresOvalDriftThree {
+  0% {
+    transform: translate3d(-3vw, 4rem, 0) rotate(18deg) scale(1, 0.94);
+  }
+
+  24% {
+    transform: translate3d(10vw, -6rem, 0) rotate(-34deg) scale(0.9, 1.14);
+  }
+
+  68% {
+    transform: translate3d(-14vw, -2rem, 0) rotate(74deg) scale(1.12, 0.9);
+  }
+
+  100% {
+    transform: translate3d(-3vw, 4rem, 0) rotate(198deg) scale(1, 0.94);
+  }
+}
+
+@keyframes featuresMobileOvalOne {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(8deg) scale(1, 1.04);
+  }
+
+  34% {
+    transform: translate3d(14vw, 1.8rem, 0) rotate(32deg) scale(1.04, 0.96);
+  }
+
+  68% {
+    transform: translate3d(7vw, -1.4rem, 0) rotate(58deg) scale(0.97, 1.06);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(98deg) scale(1, 1.04);
+  }
+}
+
+@keyframes featuresMobileOvalTwo {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-12deg) scale(0.98, 1.04);
+  }
+
+  38% {
+    transform: translate3d(-13vw, -1.5rem, 0) rotate(-38deg) scale(1.06, 0.95);
+  }
+
+  74% {
+    transform: translate3d(-6vw, 1.6rem, 0) rotate(-70deg) scale(0.96, 1.08);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-104deg) scale(0.98, 1.04);
+  }
+}
+
+@keyframes featuresMobileOvalThree {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(18deg) scale(0.98, 1);
+  }
+
+  45% {
+    transform: translate3d(11vw, -1.2rem, 0) rotate(-18deg) scale(1.05, 0.96);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-58deg) scale(0.98, 1);
+  }
+}
+
+@keyframes featuresMobileOvalFour {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-20deg) scale(1.02, 0.98);
+  }
+
+  52% {
+    transform: translate3d(-10vw, 1.4rem, 0) rotate(18deg) scale(0.96, 1.06);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(54deg) scale(1.02, 0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .features__beam {
+    animation-duration: 70s;
+  }
+}
+
+@media (max-width: 720px) {
+  .features {
+    padding: 72px 0;
+  }
+
+  .features::before {
+    background-position: 0 0, 8px 8px;
+    background-size: 16px 16px;
+    opacity: 0.36;
+  }
+
+  .features__motion-bg {
+    inset: 0;
+  }
+
+  .features__beam {
+    width: clamp(1500px, 390vw, 2400px);
+    height: clamp(300px, 74vw, 560px);
+    filter: blur(5px);
+  }
+
+  .features__beam--one {
+    left: -250vw;
+    top: 8%;
+    opacity: 0.94;
+    animation-name: featuresMobileOvalOne;
+    animation-duration: 26s;
+  }
+
+  .features__beam--two {
+    right: -250vw;
+    top: 24%;
+    opacity: 0.9;
+    animation-name: featuresMobileOvalTwo;
+    animation-duration: 30s;
+  }
+
+  .features__beam--three {
+    left: -242vw;
+    top: 50%;
+    opacity: 0.78;
+    animation-name: featuresMobileOvalThree;
+    animation-duration: 34s;
+  }
+
+  .features__beam--four {
+    right: -242vw;
+    bottom: 2%;
+    opacity: 0.74;
+    animation-name: featuresMobileOvalFour;
+    animation-duration: 32s;
+  }
+
+  .features .section-header {
+    padding: 16px;
+  }
+}
