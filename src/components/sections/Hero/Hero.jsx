@@ -106,7 +106,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero" id="top">
+    <section className="hero">
       <div className="section-shell hero__grid">
         <div className="hero__content glass-panel">
           <span className="eyebrow">Оцифровка Wildberries</span>

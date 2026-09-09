@@ -65,6 +65,7 @@
 }
 
 .hero .eyebrow {
+  /* font-size: 0.9rem; */
   color: #a2ffcc;
 }
 
@@ -192,7 +193,7 @@
 .hero__panel--ai {
   position: absolute;
   right: -100px;
-  top: -10px;
+  top: -6px;
   display: flex;
   max-width: 300px;
   gap: 14px;
@@ -213,8 +214,8 @@
 
 .hero__panel--spark {
   position: absolute;
-  left: -20px;
-  bottom: -10px;
+  left: -6px;
+  bottom: -16px;
   display: flex;
   align-items: center;
   gap: 12px;

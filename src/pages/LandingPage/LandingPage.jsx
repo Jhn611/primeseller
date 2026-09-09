@@ -10,6 +10,7 @@ import VideoReview from '../../components/sections/VideoReview';
 export default function LandingPage() {
   return (
     <>
+      <span id="top" />
       <Header />
       <main>
         <Hero />
