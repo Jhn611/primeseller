@@ -77,6 +77,7 @@ a {
 }
 
 .glass-panel {
+  --glass-panel-backdrop: blur(6px) saturate(110%);
   border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: 8px;
   background:
@@ -88,11 +89,12 @@ a {
     0 0 24px rgba(255, 255, 255, 0.438),
     0 32px 66px rgba(8, 127, 91, 0.18),
     0 20px 48px rgba(5, 17, 13, 0.15);
-  backdrop-filter: blur(6px) saturate(110%);
-  -webkit-backdrop-filter: blur(6px) saturate(110%);
+  -webkit-backdrop-filter: var(--glass-panel-backdrop);
+  backdrop-filter: var(--glass-panel-backdrop);
 }
 
 .glass-chip {
+  --glass-chip-backdrop: blur(10px) saturate(140%);
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 8px;
   background:
@@ -101,8 +103,8 @@ a {
   box-shadow:
     0 0 16px rgba(255, 255, 255, 0.08),
     0 18px 38px rgba(8, 127, 91, 0.12);
-  backdrop-filter: blur(10px) saturate(140%);
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: var(--glass-chip-backdrop);
+  backdrop-filter: var(--glass-chip-backdrop);
 }
 
 /* .glass-matte {

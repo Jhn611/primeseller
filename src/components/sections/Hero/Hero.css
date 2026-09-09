@@ -75,6 +75,7 @@
 }
 
 .hero__panel {
+  --hero-panel-backdrop: blur(16px) saturate(140%);
   border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 8px;
   background:
@@ -85,8 +86,8 @@
     0 0 28px rgba(255, 255, 255, 0.16),
     0 34px 76px rgba(8, 127, 91, 0.22),
     0 22px 54px rgba(5, 17, 13, 0.18);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: var(--hero-panel-backdrop);
+  backdrop-filter: var(--hero-panel-backdrop);
 }
 
 .hero__panel--main {
