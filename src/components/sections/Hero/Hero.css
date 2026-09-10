@@ -204,7 +204,25 @@
 .hero__panel--ai svg,
 .hero__panel--spark svg {
   flex: 0 0 auto;
-  color: var(--violet);
+  animation: colorChange 4s ease-in-out infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: var(--violet);
+  }
+  25% {
+    color: var(--violet-between);
+  }
+  50% {
+    color: var(--violet-pink);
+  }
+  75% {
+    color: var(--violet-between);
+  }
+  100% {
+    color: var(--violet);
+  }
 }
 
 .hero__panel--ai strong {
